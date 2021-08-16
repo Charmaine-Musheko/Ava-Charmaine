@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ava_Charmaine1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-ID-FIE">
+                                <rect key="frame" x="20" y="144" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="W0o-aN-Za5"/>
+                                </constraints>
+                                <state key="normal" title="Speech Dictation"/>
+                                <connections>
+                                    <action selector="btn_start_stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6S-Ku-tDI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KE5-dr-pJR">
+                                <rect key="frame" x="70" y="244" width="274" height="460"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toc-m3-h0i">
+                                        <rect key="frame" x="0.0" y="8" width="274" height="444"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="444" id="PLN-Ef-bcs"/>
+                                        </constraints>
+                                        <string key="text">Draling, you feel heavy because you are too full of truth. open your mouth more. Let the truth exist somewhere other than inside your body- Della Hicks- Wilson</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="toc-m3-h0i" secondAttribute="trailing" id="Lxe-iB-fJN"/>
+                                    <constraint firstItem="toc-m3-h0i" firstAttribute="leading" secondItem="KE5-dr-pJR" secondAttribute="leading" id="bqU-0B-LFw"/>
+                                    <constraint firstItem="toc-m3-h0i" firstAttribute="top" secondItem="KE5-dr-pJR" secondAttribute="top" constant="8" id="iKR-fq-82V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KE5-dr-pJR" secondAttribute="bottom" constant="158" id="DdV-yB-RSk"/>
+                            <constraint firstItem="3vH-ID-FIE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IOt-gf-bCk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KE5-dr-pJR" secondAttribute="trailing" constant="70" id="JE6-Qr-V6C"/>
+                            <constraint firstItem="3vH-ID-FIE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2Q-vv-MfY"/>
+                            <constraint firstItem="KE5-dr-pJR" firstAttribute="top" secondItem="3vH-ID-FIE" secondAttribute="bottom" constant="45" id="bP9-0d-He4"/>
+                            <constraint firstItem="KE5-dr-pJR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="di7-g7-j3T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vH-ID-FIE" secondAttribute="trailing" constant="20" id="nZ7-Lq-U6L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_start" destination="3vH-ID-FIE" id="bCj-Jl-pVR"/>
+                        <outlet property="lb_speech" destination="toc-m3-h0i" id="kZh-4c-iCW"/>
+                        <outlet property="view_color" destination="KE5-dr-pJR" id="cTI-WM-QbL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
